@@ -23,7 +23,7 @@
   "automerge": false,
 
   // PR のタイトルと commit message の Prefix
-  "commitMessageAction": "【Renovate】",
+  "commitMessageAction": "[Renovate]",
 
   // Xcode Cloud の CI の無効化
   "commitMessageSuffix": "[ci skip]",

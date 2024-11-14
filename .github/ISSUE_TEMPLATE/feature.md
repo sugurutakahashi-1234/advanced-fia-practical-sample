@@ -1,7 +1,7 @@
 ---
 name: Feature
 about: Feature
-title: "【】"
+title: "[]"
 labels: []
 assignees: ""
 ---

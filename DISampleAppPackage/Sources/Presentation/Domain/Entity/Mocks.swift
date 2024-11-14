@@ -537,7 +537,7 @@ public final class LogDriverProviderMock: LogDriverProvider {
     }
 }
 
-public final class LocalDataStoreDriverProtocolMock: LocalDataStoreDriverProtocol {
+public final class LocalDataStoreDriverProtocolMock: LocalDataStoreDriverProtocol, @unchecked Sendable {
     public init() { }
     public init(launchAppCount: Int = 0, isCompletedOnboarding: Bool = false, apnsToken: Data? = nil) {
         self.launchAppCount = launchAppCount

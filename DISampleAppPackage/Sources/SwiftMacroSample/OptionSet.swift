@@ -11,6 +11,7 @@ import SwiftSyntaxMacros
 public macro OptionSet<RawType>() = #externalMacro(module: "SwiftMacros", type: "OptionSetMacro")
 
 // MARK: - sample(使う予定はないです)
+// Ref: https://www.swiftlangjp.com/language-guide/macros.html
 
 @OptionSet<Int>
 // swiftformat:disable enumNamespaces

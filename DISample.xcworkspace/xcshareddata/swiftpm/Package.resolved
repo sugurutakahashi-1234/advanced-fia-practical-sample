@@ -1,5 +1,5 @@
 {
-  "originHash" : "213506d0f862617b22c3ce59e72eb5406fe8c2f68cb937b6ab238efc191d801c",
+  "originHash" : "67bb9661fce3459b271a91da4f2b171d8d6fe93a60a87b20fa5665cb8f4a64a9",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -128,12 +128,12 @@
       }
     },
     {
-      "identity" : "licensesplugin",
+      "identity" : "licenselist",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/maiyama18/LicensesPlugin",
+      "location" : "https://github.com/cybozu/LicenseList.git",
       "state" : {
-        "revision" : "b303f6b92427d6236e63bd75b559f095101817aa",
-        "version" : "0.1.6"
+        "revision" : "a74584035935447b81bcfea5319555812487001b",
+        "version" : "1.1.1"
       }
     },
     {
@@ -240,8 +240,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-syntax.git",
       "state" : {
-        "revision" : "fa8f95c2d536d6620cc2f504ebe8a6167c9fc2dd",
-        "version" : "510.0.1"
+        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "version" : "600.0.1"
       }
     },
     {
@@ -249,8 +249,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-testing.git",
       "state" : {
-        "revision" : "97d1f8a4e91794ec6bbf1ecb252ab31b1e255052",
-        "version" : "0.7.0"
+        "revision" : "399f76dcd91e4c688ca2301fa24a8cc6d9927211",
+        "version" : "0.99.0"
       }
     },
     {

@@ -1,4 +1,4 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import CompilerPluginSupport
@@ -23,40 +23,22 @@ let swiftFlags = [
 /// Ref: https://github.com/treastrain/swift-upcomingfeatureflags-cheatsheet
 /// Ref: https://zenn.dev/treastrain/articles/d2fd1b44e3ead5
 extension SwiftSetting {
-    static let strictConcurrency: Self = .enableExperimentalFeature("StrictConcurrency") // https://www.swift.org/documentation/concurrency/
-    static let forwardTrailingClosures: Self = .enableUpcomingFeature("ForwardTrailingClosures") // SE-0286, Swift 5.3,  SwiftPM 5.8+
     static let existentialAny: Self = .enableUpcomingFeature("ExistentialAny") // SE-0335, Swift 5.6,  SwiftPM 5.8+
-    static let bareSlashRegexLiterals: Self = .enableUpcomingFeature("BareSlashRegexLiterals") // SE-0354, Swift 5.7,  SwiftPM 5.8+
-    static let conciseMagicFile: Self = .enableUpcomingFeature("ConciseMagicFile") // SE-0274, Swift 5.8,  SwiftPM 5.8+
-    static let importObjcForwardDeclarations: Self = .enableUpcomingFeature("ImportObjcForwardDeclarations") // SE-0384, Swift 5.9,  SwiftPM 5.9+
-    static let disableOutwardActorInference: Self = .enableUpcomingFeature("DisableOutwardActorInference") // SE-0401, Swift 5.9,  SwiftPM 5.9+
-    static let deprecateApplicationMain: Self = .enableUpcomingFeature("DeprecateApplicationMain") // SE-0383, Swift 5.10, SwiftPM 5.10+
-    static let isolatedDefaultValues: Self = .enableUpcomingFeature("IsolatedDefaultValues") // SE-0411, Swift 5.10, SwiftPM 5.10+
-    static let globalConcurrency: Self = .enableUpcomingFeature("GlobalConcurrency") // SE-0412, Swift 5.10, SwiftPM 5.10+
     static let otherSwiftFlags: Self = .unsafeFlags(swiftFlags)
 }
 
 /// Ref: https://github.com/treastrain/swift-upcomingfeatureflags-cheatsheet
 /// Ref: https://zenn.dev/treastrain/articles/d2fd1b44e3ead5
-extension SwiftSetting: CaseIterable {
+extension SwiftSetting: @retroactive CaseIterable {
     public static var allCases: [Self] {
         [
-            .strictConcurrency,
-            .forwardTrailingClosures,
             .existentialAny,
-            .bareSlashRegexLiterals,
-            .conciseMagicFile,
-            .importObjcForwardDeclarations,
-            .disableOutwardActorInference,
-            .deprecateApplicationMain,
-            .isolatedDefaultValues,
-            .globalConcurrency,
             .otherSwiftFlags,
         ]
     }
 }
 
-struct DependencyLibrary {
+struct DependencyLibrary: @unchecked Sendable {
     let dependencies: [PackageDescription.Target.Dependency]
     let plugins: [PackageDescription.Target.PluginUsage]
 
@@ -66,7 +48,7 @@ struct DependencyLibrary {
     }
 }
 
-enum MacroTargetType: CaseIterable {
+enum MacroTargetType: CaseIterable, @unchecked Sendable {
     case swiftMacroSample
 
     private var name: String {
@@ -86,7 +68,7 @@ enum MacroTargetType: CaseIterable {
     }
 }
 
-enum FrameworkTargetType: CaseIterable {
+enum FrameworkTargetType: CaseIterable, @unchecked Sendable {
     case firebase
     case device
     case license
@@ -96,7 +78,7 @@ enum FrameworkTargetType: CaseIterable {
     }
 }
 
-enum TargetType: CaseIterable {
+enum TargetType: CaseIterable, @unchecked Sendable {
     case dependencyInjection
     case domain
     case framework(FrameworkTargetType)
@@ -180,7 +162,7 @@ enum TargetType: CaseIterable {
     }
 }
 
-enum TestTargetType: CaseIterable {
+enum TestTargetType: CaseIterable, Sendable {
     case driverTest
     case interactorTest
     case presenterTest
@@ -217,22 +199,20 @@ enum TestTargetType: CaseIterable {
 
 private extension PackageDescription.Target.Dependency {
     /// Library
-    static let firebaseAnalytics: Self = .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk")
-    static let firebaseRemoteConfig: Self = .product(name: "FirebaseRemoteConfig", package: "firebase-ios-sdk")
-    static let firebaseCrashlytics: Self = .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk")
-    static let previewSnapshots: Self = .product(name: "PreviewSnapshots", package: "swiftui-preview-snapshots")
-    static let previewSnapshotsTesting: Self = .product(name: "PreviewSnapshotsTesting", package: "swiftui-preview-snapshots")
-    static let previewGallery: Self = .product(name: "PreviewGallery", package: "SnapshotPreviews-iOS")
-    static let swiftSyntaxMacros: Self = .product(name: "SwiftSyntaxMacros", package: "swift-syntax")
-    static let swiftCompilerPlugin: Self = .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
-    static let deviceKit: Self = .product(name: "DeviceKit", package: "DeviceKit")
+    nonisolated(unsafe) static let firebaseAnalytics: Self = .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk")
+    nonisolated(unsafe) static let firebaseRemoteConfig: Self = .product(name: "FirebaseRemoteConfig", package: "firebase-ios-sdk")
+    nonisolated(unsafe) static let firebaseCrashlytics: Self = .product(name: "FirebaseCrashlytics", package: "firebase-ios-sdk")
+    nonisolated(unsafe) static let previewSnapshots: Self = .product(name: "PreviewSnapshots", package: "swiftui-preview-snapshots")
+    nonisolated(unsafe) static let previewSnapshotsTesting: Self = .product(name: "PreviewSnapshotsTesting", package: "swiftui-preview-snapshots")
+    nonisolated(unsafe) static let previewGallery: Self = .product(name: "PreviewGallery", package: "SnapshotPreviews-iOS")
+    nonisolated(unsafe) static let deviceKit: Self = .product(name: "DeviceKit", package: "DeviceKit")
+    nonisolated(unsafe) static let licenseList: Self = .product(name: "LicenseList", package: "LicenseList")
 
     /// Test
-    static let testing: Self = .product(name: "Testing", package: "swift-testing")
-}
-
-private extension PackageDescription.Target.PluginUsage {
-    static let licensesPlugin: Self = .plugin(name: "LicensesPlugin", package: "LicensesPlugin")
+    nonisolated(unsafe) static let testing: Self = .product(name: "Testing", package: "swift-testing")
+    
+    nonisolated(unsafe) static let swiftSyntaxMacros: Self = .product(name: "SwiftSyntaxMacros", package: "swift-syntax")
+    nonisolated(unsafe) static let swiftCompilerPlugin: Self = .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
 }
 
 // MARK: - Package
@@ -250,19 +230,18 @@ let package = Package(
         .package(url: "https://github.com/firebase/firebase-ios-sdk.git", from: "10.24.0"),
         .package(url: "https://github.com/doordash-oss/swiftui-preview-snapshots", from: "1.1.1"),
         .package(url: "https://github.com/EmergeTools/SnapshotPreviews-iOS", from: "0.8.8"),
-        .package(url: "https://github.com/apple/swift-syntax", from: "510.0.1"),
+        .package(url: "https://github.com/apple/swift-syntax", from: "600.0.1"),
         .package(url: "https://github.com/devicekit/DeviceKit.git", from: "5.2.3"),
+        .package(url: "https://github.com/cybozu/LicenseList.git", from: "1.1.1"),
 
         // Test
         .package(url: "https://github.com/apple/swift-testing.git", from: "0.7.0"),
-
-        // Plugin
-        .package(url: "https://github.com/maiyama18/LicensesPlugin", from: "0.1.6"),
 
         // for CLI
         .package(url: "https://github.com/yonaskolb/Mint.git", from: "0.17.5"),
         .package(url: "https://github.com/daikimat/depermaid.git", from: "1.1.0"),
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.3.0"),
+        
     ],
     targets: MacroTargetType.allCases.map { $0.target } + TargetType.allCases.map { $0.target } + TestTargetType.allCases.map { $0.target }
 )
@@ -310,8 +289,7 @@ extension TargetType {
         case .framework(.license):
             .init([
                 TargetType.domain.dependency,
-            ], plugins: [
-                .licensesPlugin,
+                .licenseList,
             ])
         case .presentation:
             .init([

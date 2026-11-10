@@ -1,9 +1,11 @@
 
 English | [日本語](./README.ja.md)
 
-# FIA Practical Sample
+# Advanced FIA Practical Sample
 
 This repository is a sample iOS application implemented in Swift, based on the design concept of [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2011/11/22/Clean-Architecture.html) adapted to [Framework-Independent Architecture (FIA)](https://github.com/suguruTakahashi-1234/framework-independent-architecture).
+
+> This is the Swift 6 version of [FIA Practical Sample](https://github.com/suguruTakahashi-1234/fia-practical-sample). It has the same history, plus the changes needed to build with swift-tools-version 6.0 (`Sendable` conformances and package settings).
 
 ## Demo
 
@@ -12,42 +14,42 @@ This repository is a sample iOS application implemented in Swift, based on the d
 </div>
 
 #### Repository About
-[![GitHub license](https://img.shields.io/github/license/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/blob/main/LICENSE.md)
-[![GitHub Repo stars](https://img.shields.io/github/stars/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/watchers)
-[![GitHub forks](https://img.shields.io/github/forks/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/network/members)
-[![GitHub contributors](https://img.shields.io/github/contributors/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/graphs/contributors)
-[![Github Created At](https://img.shields.io/github/created-at/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/releases)
-[![GitHub top language](https://img.shields.io/github/languages/top/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample)
-[![GitHub repo size](https://img.shields.io/github/repo-size/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample)
+[![GitHub license](https://img.shields.io/github/license/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/blob/main/LICENSE.md)
+[![GitHub Repo stars](https://img.shields.io/github/stars/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/watchers)
+[![GitHub forks](https://img.shields.io/github/forks/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/network/members)
+[![GitHub contributors](https://img.shields.io/github/contributors/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/graphs/contributors)
+[![Github Created At](https://img.shields.io/github/created-at/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/releases)
+[![GitHub top language](https://img.shields.io/github/languages/top/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample)
+[![GitHub repo size](https://img.shields.io/github/repo-size/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample)
 
 #### Issue & PR
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/pulls)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/issues?q=is%3Aissue+is%3Aclosed)
-[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/pulls?q=is%3Apr+is%3Aclosed)
+[![GitHub issues](https://img.shields.io/github/issues-raw/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/pulls)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/pulls?q=is%3Apr+is%3Aclosed)
 
 #### Release & Tag
 
-[![GitHub Tag](https://img.shields.io/github/v/tag/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/tags)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/releases)
-[![GitHub Release Date](https://img.shields.io/github/release-date/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/releases)
-[![GitHub commits since latest release](https://img.shields.io/github/commits-since/suguruTakahashi-1234/fia-practical-sample/latest)](https://github.com/suguruTakahashi-1234/fia-practical-sample)
+[![GitHub Tag](https://img.shields.io/github/v/tag/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/tags)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/releases)
+[![GitHub Release Date](https://img.shields.io/github/release-date/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/releases)
+[![GitHub commits since latest release](https://img.shields.io/github/commits-since/suguruTakahashi-1234/advanced-fia-practical-sample/latest)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample)
 
 #### Commit Activity
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/commits)
-[![GitHub commit activity (Week)](https://img.shields.io/github/commit-activity/w/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample)
-[![GitHub commit activity (Month)](https://img.shields.io/github/commit-activity/m/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample)
-[![GitHub commit activity (Year)](https://img.shields.io/github/commit-activity/y/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample)
-[![GitHub commit activity (Total)](https://img.shields.io/github/commit-activity/t/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/commits)
+[![GitHub last commit](https://img.shields.io/github/last-commit/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/commits)
+[![GitHub commit activity (Week)](https://img.shields.io/github/commit-activity/w/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample)
+[![GitHub commit activity (Month)](https://img.shields.io/github/commit-activity/m/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample)
+[![GitHub commit activity (Year)](https://img.shields.io/github/commit-activity/y/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample)
+[![GitHub commit activity (Total)](https://img.shields.io/github/commit-activity/t/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/commits)
 
 #### Workflow Status
 
-[![GitHub Actions Workflow Status (tag_and_release_note_gen.yml)](https://img.shields.io/github/actions/workflow/status/suguruTakahashi-1234/fia-practical-sample/tag_and_release_note_gen.yml)](https://github.com/suguruTakahashi-1234/fia-practical-sample/actions/workflows/tag_and_release_note_gen.yml)
-[![GitHub Actions Workflow Status (swift_docc_hosting.yml)](https://img.shields.io/github/actions/workflow/status/suguruTakahashi-1234/fia-practical-sample/swift_docc_hosting.yml)](https://github.com/suguruTakahashi-1234/fia-practical-sample/actions/workflows/swift_docc_hosting.yml)
-[![GitHub Actions Workflow Status (multilingual_readme_check.yml)](https://img.shields.io/github/actions/workflow/status/suguruTakahashi-1234/fia-practical-sample/multilingual_readme_check.yml)](https://github.com/suguruTakahashi-1234/fia-practical-sample/actions/workflows/multilingual_readme_check.yml)
+[![GitHub Actions Workflow Status (tag_and_release_note_gen.yml)](https://img.shields.io/github/actions/workflow/status/suguruTakahashi-1234/advanced-fia-practical-sample/tag_and_release_note_gen.yml)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/actions/workflows/tag_and_release_note_gen.yml)
+[![GitHub Actions Workflow Status (swift_docc_hosting.yml)](https://img.shields.io/github/actions/workflow/status/suguruTakahashi-1234/advanced-fia-practical-sample/swift_docc_hosting.yml)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/actions/workflows/swift_docc_hosting.yml)
+[![GitHub Actions Workflow Status (multilingual_readme_check.yml)](https://img.shields.io/github/actions/workflow/status/suguruTakahashi-1234/advanced-fia-practical-sample/multilingual_readme_check.yml)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/actions/workflows/multilingual_readme_check.yml)
 
 #### Repobeats
 
@@ -109,7 +111,7 @@ This repository is a sample iOS application implemented in Swift, based on the d
   - CI/CD with Xcode Cloud
   - Automatic generation of boilerplate code with [Sourcery](https://github.com/krzysztofzablocki/Sourcery)
   - Static analysis of unused code with [Periphery](https://github.com/peripheryapp/periphery)
-  - Management of library updates with [Renovate](https://github.com/renovatebot/renovate) ([Dashboard Issue](https://github.com/suguruTakahashi-1234/fia-practical-sample/issues/38))
+  - Management of library updates with [Renovate](https://github.com/renovatebot/renovate) ([Dashboard Issue](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/issues/38))
   - Documentation as Code initiative with [Swift-DocC](https://www.swift.org/documentation/docc/)
   - Hosting of [Swift-DocC](https://www.swift.org/documentation/docc/) with GitHub Actions
 - **Library Management**
@@ -127,8 +129,8 @@ The architecture is based on the [Framework-Independent Architecture (FIA)](http
 ### Clone Repository
 
 ```shell
-$ git clone https://github.com/suguruTakahashi-1234/fia-practical-sample.git
-$ cd fia-practical-sample
+$ git clone https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample.git
+$ cd advanced-fia-practical-sample
 ```
 
 ### Setup
@@ -179,18 +181,18 @@ Currently, only GUI operations are officially supported for Xcode Cloud configur
 
 The project has the following GitHub Actions set up to aid development.
 
-- [Host Swift-DocC](https://github.com/suguruTakahashi-1234/fia-practical-sample/actions/workflows/swift_docc_hosting.yml)
-- [Generate Tag & Release Note](https://github.com/suguruTakahashi-1234/fia-practical-sample/actions/workflows/tag_and_release_note_gen.yml)
+- [Host Swift-DocC](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/actions/workflows/swift_docc_hosting.yml)
+- [Generate Tag & Release Note](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/actions/workflows/tag_and_release_note_gen.yml)
 
 ## Documents
 
-The GitHub Actions of [Host Swift-DocC](https://github.com/suguruTakahashi-1234/fia-practical-sample/actions/workflows/swift_docc_hosting.yml) are hosting the Swift-DocC of the domain layer code at the following link.
+The GitHub Actions of [Host Swift-DocC](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/actions/workflows/swift_docc_hosting.yml) are hosting the Swift-DocC of the domain layer code at the following link.
 
 - [DomainLayer](https://sugurutakahashi-1234.github.io/fia-practical-sample/documentation/domainlayer/)
 
 ## Contributing
 
-[![GitHub contributors](https://img.shields.io/github/contributors/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/graphs/contributors)
+[![GitHub contributors](https://img.shields.io/github/contributors/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/graphs/contributors)
 
 Thank you for your interest in contributing! 🌟
 
@@ -198,11 +200,11 @@ Please check out our [CONTRIBUTING](./CONTRIBUTING.md) and [CODE_OF_CONDUCT](./C
 
 ## License
 
-[![GitHub license](https://img.shields.io/github/license/suguruTakahashi-1234/fia-practical-sample)](https://github.com/suguruTakahashi-1234/fia-practical-sample/blob/main/LICENSE.md)
+[![GitHub license](https://img.shields.io/github/license/suguruTakahashi-1234/advanced-fia-practical-sample)](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/blob/main/LICENSE.md)
 
 See the [LICENSE](./LICENSE.md) file for license rights and limitations (MIT).
 
 ## Contact
 
 For questions or collaborations, please feel free to contact us on [![X URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fikuraikuraaaaaa)](https://twitter.com/ikuraikuraaaaaa)
- or [GitHub Issue](https://github.com/suguruTakahashi-1234/fia-practical-sample/issues).
+ or [GitHub Issue](https://github.com/suguruTakahashi-1234/advanced-fia-practical-sample/issues).
